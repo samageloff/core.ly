@@ -19,7 +19,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
     "start": "node server.js",
-    "build": "parcel build index.js",
+    "clean": "rimraf dist",
+    "build": "npm run clean && parcel index.html index.js && npm run start",
     "postinstall": "npm run build"
   },
   "repository": {
